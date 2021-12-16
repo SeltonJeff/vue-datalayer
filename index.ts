@@ -1,5 +1,7 @@
 import Vue from 'vue'
-​
+
+declare const window: any
+
 const handleSetOnDataLayer = (currentDLObject) => {
 	const requiredDLObject = currentDLObject
 	if (window.dataLayer) window.dataLayer.push(requiredDLObject)
@@ -9,10 +11,10 @@ const handleSetOnDataLayer = (currentDLObject) => {
 	}
 }
 ​
-const handleClickObserver = (el, currentDLObject) => {
+const handleClickObserver = (el: HTMLElement, currentDLObject: any) => {
 	const keys = Object.keys(currentDLObject)
 	const values = Object.values(currentDLObject)
-	const requiredDLObject = {}
+	const requiredDLObject: any = {}
 	el.onclick = () => {
 		for (const i in Object.keys(currentDLObject)) {
 			if (keys[i] !== 'click' && keys[i] !== 'hover')
@@ -23,10 +25,10 @@ const handleClickObserver = (el, currentDLObject) => {
 	}
 }
 ​
-const handleMouseOverObserver = (el, currentDLObject) => {
+const handleMouseOverObserver = (el: HTMLElement, currentDLObject: any) => {
 	const keys = Object.keys(currentDLObject)
 	const values = Object.values(currentDLObject)
-	const requiredDLObject = {}
+	const requiredDLObject: any = {}
 	el.onmouseover = () => {
 		for (const i in Object.keys(currentDLObject)) {
 			if (keys[i] !== 'click' && keys[i] !== 'hover')
@@ -37,7 +39,7 @@ const handleMouseOverObserver = (el, currentDLObject) => {
 	}
 }
 ​
-const handleComposeDLObject = (el, customDLObject) => {
+const handleComposeDLObject = (el: HTMLElement, customDLObject: any) => {
 	const defaultDLObject = {
 		click: true,
 		hover: false,
@@ -50,7 +52,7 @@ const handleComposeDLObject = (el, customDLObject) => {
 }
 ​
 Vue.directive('DLObject', {
-	bind(el, { value }) {
+	bind(el: HTMLElement, { value }: any) {
 		const customDLObject = value
 		const currentDLObject = handleComposeDLObject(el, customDLObject)
 		if (currentDLObject !== null && currentDLObject.click === true)
