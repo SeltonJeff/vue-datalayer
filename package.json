@@ -1,0 +1,11 @@
+{
+  "name": "vue-datalayer",
+  "version": "0.0.1",
+  "description": "datalayer plugin for nuxt",
+  "main": "index.js",
+  "author": "Selton Jeffeson",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
+}
