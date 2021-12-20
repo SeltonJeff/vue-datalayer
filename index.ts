@@ -2,7 +2,7 @@ import Vue from 'vue'
 
 declare const window: any
 
-const handleSetOnDataLayer = (currentDLObject) => {
+const handleSetOnDataLayer = (currentDLObject: any) => {
 	const requiredDLObject = currentDLObject
 	if (window.dataLayer) window.dataLayer.push(requiredDLObject)
 	else {
