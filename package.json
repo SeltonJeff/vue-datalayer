@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/SeltonJeff/vue-datalayer/issues"
   },
-  "homepage": "https://github.com/SeltonJeff/vue-datalayer#readme"
+  "homepage": "https://github.com/SeltonJeff/vue-datalayer#readme",
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
 }
