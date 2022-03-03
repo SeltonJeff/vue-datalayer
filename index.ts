@@ -1,6 +1,7 @@
 import Vue from 'vue'
 
 declare const window: any
+declare const Object: any
 
 const handleSetOnDataLayer = (currentDLObject: any) => {
 	const requiredDLObject = currentDLObject
@@ -10,7 +11,7 @@ const handleSetOnDataLayer = (currentDLObject: any) => {
 		window.dataLayer.push(requiredDLObject)
 	}
 }
-​
+
 const handleClickObserver = (el: HTMLElement, currentDLObject: any) => {
 	const keys = Object.keys(currentDLObject)
 	const values = Object.values(currentDLObject)
@@ -24,7 +25,7 @@ const handleClickObserver = (el: HTMLElement, currentDLObject: any) => {
 		handleSetOnDataLayer(requiredDLObject)
 	}
 }
-​
+
 const handleMouseOverObserver = (el: HTMLElement, currentDLObject: any) => {
 	const keys = Object.keys(currentDLObject)
 	const values = Object.values(currentDLObject)
@@ -38,7 +39,7 @@ const handleMouseOverObserver = (el: HTMLElement, currentDLObject: any) => {
 		handleSetOnDataLayer(requiredDLObject)
 	}
 }
-​
+
 const handleComposeDLObject = (el: HTMLElement, customDLObject: any) => {
 	const defaultDLObject = {
 		click: true,
@@ -50,7 +51,6 @@ const handleComposeDLObject = (el: HTMLElement, customDLObject: any) => {
 	}
 	return Object.assign(defaultDLObject, customDLObject)
 }
-​
 Vue.directive('DLObject', {
 	bind(el: HTMLElement, { value }: any) {
 		const customDLObject = value
