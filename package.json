@@ -1,18 +1,23 @@
 {
   "name": "vue-datalayer",
-  "version": "0.0.3",
+  "version": "0.1.3",
   "description": "datalayer plugin for nuxt",
   "main": "index.js",
   "author": "Selton Jeffeson",
   "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SeltonJeff/vue-datalayer.git"
   },
-  "keywords": [],
+  "keywords": [
+    "vue",
+    "vue3",
+    "vue 3",
+    "datalayer",
+    "vue datalayer",
+    "vue3 datalayer",
+    "vue 3 datalayer",
+  ],
   "bugs": {
     "url": "https://github.com/SeltonJeff/vue-datalayer/issues"
   },
